@@ -1,0 +1,15 @@
+requests
+beautifulsoup4
+lxml
+pillow
+pytesseract
+pandas
+rank-bm25
+trafilatura
+underthesea
+gnews-decoder
+python-dotenv
+transformers
+accelerate
+bitsandbytes
+torch

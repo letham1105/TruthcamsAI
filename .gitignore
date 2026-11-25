@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Backend environment and database
+backend/.env
+backend/.env.*
+backend/truthcams.db
+backend/*.db
+*.sqlite
+*.sqlite3
+
+# Model checkpoints and cache
+ai_service/models/*
+!ai_service/models/.gitkeep
+.cache/
+huggingface_cache/
+**/huggingface_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Build artifacts
+build/
+coverage/

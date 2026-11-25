@@ -1,0 +1,120 @@
+====================================================================================================
+THRESHOLD COMPARISON
+====================================================================================================
+Total sentences: 37
+
+====================================================================================================
+THRESHOLD: 0.05
+====================================================================================================
+Kept: 37 / 37
+Rejected: 0 / 37
+
+[KEPT]
+supported: 4
+refuted: 11
+not_enough_information: 22
+
+[REJECTED]
+supported: 0
+refuted: 0
+not_enough_information: 0
+
+[REJECTED SENTENCES]
+
+====================================================================================================
+THRESHOLD: 0.08
+====================================================================================================
+Kept: 30 / 37
+Rejected: 7 / 37
+
+[KEPT]
+supported: 4
+refuted: 11
+not_enough_information: 15
+
+[REJECTED]
+supported: 0
+refuted: 0
+not_enough_information: 7
+
+[REJECTED SENTENCES]
+
+CafeF Rank 1 | score=0.0578 | label=not_enough_information | confidence=0.9963
+Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+
+CafeF Rank 1 | score=0.0648 | label=not_enough_information | confidence=0.9894
+Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+
+CafeF Rank 1 | score=0.0789 | label=not_enough_information | confidence=0.9885
+Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+Kenh14 Rank 3 | score=0.0608 | label=not_enough_information | confidence=0.9910
+Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+
+Kenh14 Rank 3 | score=0.0737 | label=not_enough_information | confidence=0.9977
+Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+Dan Tri Rank 5 | score=0.0585 | label=not_enough_information | confidence=0.9910
+Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+
+Dan Tri Rank 5 | score=0.0799 | label=not_enough_information | confidence=0.9888
+Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
+
+====================================================================================================
+THRESHOLD: 0.1
+====================================================================================================
+Kept: 26 / 37
+Rejected: 11 / 37
+
+[KEPT]
+supported: 4
+refuted: 10
+not_enough_information: 12
+
+[REJECTED]
+supported: 0
+refuted: 1
+not_enough_information: 10
+
+[REJECTED SENTENCES]
+
+CafeF Rank 1 | score=0.0578 | label=not_enough_information | confidence=0.9963
+Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+
+CafeF Rank 1 | score=0.0648 | label=not_enough_information | confidence=0.9894
+Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+
+CafeF Rank 1 | score=0.0789 | label=not_enough_information | confidence=0.9885
+Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+Kenh14 Rank 3 | score=0.0804 | label=not_enough_information | confidence=0.9893
+Từ những tài liệu thu thập được, cơ quan điều tra đề nghị truy tố Nguyễn Hòa Bình về tội lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+
+Kenh14 Rank 3 | score=0.0608 | label=not_enough_information | confidence=0.9910
+Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+
+Kenh14 Rank 3 | score=0.0737 | label=not_enough_information | confidence=0.9977
+Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+Dan Tri Rank 5 | score=0.0863 | label=not_enough_information | confidence=0.9944
+Một phần tiền còn được chuyển vào các doanh nghiệp trong hệ sinh thái NextTech để sử dụng không đúng mục đích.
+
+Dan Tri Rank 5 | score=0.0585 | label=not_enough_information | confidence=0.9910
+Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+
+Dan Tri Rank 5 | score=0.0983 | label=refuted | confidence=0.9411
+Tuy nhiên, gần 45 tỷ đồng trong số này không được đưa vào sổ sách kế toán.
+
+Dan Tri Rank 5 | score=0.0950 | label=not_enough_information | confidence=0.9857
+Đối với hoạt động của Công ty cổ phần Công nghệ Vimo, cơ quan điều tra xác định Shark Bình chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, đồng thời không hạch toán đầy đủ doanh thu vào sổ sách.
+
+Dan Tri Rank 5 | score=0.0799 | label=not_enough_information | confidence=0.9888
+Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
+
+====================================================================================================
+COMPARISON TABLE
+====================================================================================================
+Threshold   Kept        Rejected    Supported     Refuted       NEI           
+0.05        37          0           4             11            22            
+0.08        30          7           4             11            15            
+0.1         26          11          4             10            12            

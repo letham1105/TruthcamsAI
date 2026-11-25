@@ -1,0 +1,361 @@
+
+====================================================================================================
+CafeF Rank 1
+====================================================================================================
+
+S1 | score=0.2076
+Ngoài dự án tiền số, cơ quan điều tra còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi bị can Nguyễn Hòa Bình bị cáo buộc chỉ đạo nhân viên sử dụng 2 hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+
+S2 | score=0.1558
+Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+
+S3 | score=0.1857
+Tuy nhiên, trong số tiền này, gần 45 tỷ đồng bị để ngoài sổ sách kế toán.
+
+S4 | score=0.1274
+Cơ quan điều tra xác định, việc sử dụng 2 hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Nguyễn Hòa Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+
+S5 | score=0.0578
+Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+
+S6 | score=0.0648
+Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+
+S7 | score=0.0789
+Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+S8 | score=0.1670
+Đáng chú ý, Nguyễn Hòa Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+
+S9 | score=0.5275
+Bằng những hành vi này, tổng số tiền Nguyễn Hòa Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+
+S10 | score=0.2339
+Trong vụ án này, bị can Nguyễn Hữu Tuất được xác định là người giúp sức cho Nguyễn Hòa Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Công ty Vi Mô.
+
+S11 | score=0.1673
+Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+S12 | score=0.2080
+Bị can còn đồng phạm trong việc bán hàng không xuất hóa đơn, để doanh thu ngoài sổ sách tại Công ty Vi Mô, dẫn đến hành vi trốn thuế số tiền đặc biệt lớn.
+
+----------------------------------------------------------------------------------------------------
+
+THRESHOLD = 0.1
+Kept: 9/12 | Rejected: 3/12
+
+[KEPT]
+- Ngoài dự án tiền số, cơ quan điều tra còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi bị can Nguyễn Hòa Bình bị cáo buộc chỉ đạo nhân viên sử dụng 2 hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỷ đồng bị để ngoài sổ sách kế toán.
+- Cơ quan điều tra xác định, việc sử dụng 2 hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Nguyễn Hòa Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Đáng chú ý, Nguyễn Hòa Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Bằng những hành vi này, tổng số tiền Nguyễn Hòa Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+- Trong vụ án này, bị can Nguyễn Hữu Tuất được xác định là người giúp sức cho Nguyễn Hòa Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Công ty Vi Mô.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+- Bị can còn đồng phạm trong việc bán hàng không xuất hóa đơn, để doanh thu ngoài sổ sách tại Công ty Vi Mô, dẫn đến hành vi trốn thuế số tiền đặc biệt lớn.
+
+[REJECTED]
+- Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+- Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+THRESHOLD = 0.15
+Kept: 8/12 | Rejected: 4/12
+
+[KEPT]
+- Ngoài dự án tiền số, cơ quan điều tra còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi bị can Nguyễn Hòa Bình bị cáo buộc chỉ đạo nhân viên sử dụng 2 hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỷ đồng bị để ngoài sổ sách kế toán.
+- Đáng chú ý, Nguyễn Hòa Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Bằng những hành vi này, tổng số tiền Nguyễn Hòa Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+- Trong vụ án này, bị can Nguyễn Hữu Tuất được xác định là người giúp sức cho Nguyễn Hòa Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Công ty Vi Mô.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+- Bị can còn đồng phạm trong việc bán hàng không xuất hóa đơn, để doanh thu ngoài sổ sách tại Công ty Vi Mô, dẫn đến hành vi trốn thuế số tiền đặc biệt lớn.
+
+[REJECTED]
+- Cơ quan điều tra xác định, việc sử dụng 2 hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Nguyễn Hòa Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+- Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+THRESHOLD = 0.2
+Kept: 4/12 | Rejected: 8/12
+
+[KEPT]
+- Ngoài dự án tiền số, cơ quan điều tra còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi bị can Nguyễn Hòa Bình bị cáo buộc chỉ đạo nhân viên sử dụng 2 hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Bằng những hành vi này, tổng số tiền Nguyễn Hòa Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+- Trong vụ án này, bị can Nguyễn Hữu Tuất được xác định là người giúp sức cho Nguyễn Hòa Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Công ty Vi Mô.
+- Bị can còn đồng phạm trong việc bán hàng không xuất hóa đơn, để doanh thu ngoài sổ sách tại Công ty Vi Mô, dẫn đến hành vi trốn thuế số tiền đặc biệt lớn.
+
+[REJECTED]
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỷ đồng bị để ngoài sổ sách kế toán.
+- Cơ quan điều tra xác định, việc sử dụng 2 hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Nguyễn Hòa Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+- Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+- Đáng chú ý, Nguyễn Hòa Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+THRESHOLD = 0.25
+Kept: 1/12 | Rejected: 11/12
+
+[KEPT]
+- Bằng những hành vi này, tổng số tiền Nguyễn Hòa Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+
+[REJECTED]
+- Ngoài dự án tiền số, cơ quan điều tra còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi bị can Nguyễn Hòa Bình bị cáo buộc chỉ đạo nhân viên sử dụng 2 hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỷ đồng bị để ngoài sổ sách kế toán.
+- Cơ quan điều tra xác định, việc sử dụng 2 hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Nguyễn Hòa Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Một hành vi khác được làm rõ trong kết luận điều tra liên quan đến hoạt động của Công ty cổ phần công nghệ Vi Mô.
+- Theo cơ quan điều tra, Nguyễn Hòa Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+- Đáng chú ý, Nguyễn Hòa Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Trong vụ án này, bị can Nguyễn Hữu Tuất được xác định là người giúp sức cho Nguyễn Hòa Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Công ty Vi Mô.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+- Bị can còn đồng phạm trong việc bán hàng không xuất hóa đơn, để doanh thu ngoài sổ sách tại Công ty Vi Mô, dẫn đến hành vi trốn thuế số tiền đặc biệt lớn.
+
+====================================================================================================
+Kenh14 Rank 3
+====================================================================================================
+
+S1 | score=0.0804
+Từ những tài liệu thu thập được, cơ quan điều tra đề nghị truy tố Nguyễn Hòa Bình về tội lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+
+S2 | score=0.1972
+Ngoài dự án tiền số, cơ quan công an còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi Shark Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+
+S3 | score=0.1560
+Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán bảy bất động sản, thu về hơn 117,17 tỷ đồng.
+
+S4 | score=0.1628
+Tuy nhiên, trong số tiền này, gần 45 tỉ đồng bị để ngoài sổ sách kế toán.
+
+S5 | score=0.1446
+Kết luận điều tra ghi nhận Nextland đã kê khai, quyết toán thuế đối với khoản doanh thu bị để ngoài sổ sách nói trên.
+
+S6 | score=0.1310
+Tuy nhiên, cơ quan điều tra vẫn xác định việc sử dụng hai hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Shark Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+
+S7 | score=0.0608
+Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+
+S8 | score=0.0737
+Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+S9 | score=0.1681
+Đáng chú ý, Shark Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+
+S10 | score=0.5484
+Bằng những hành vi này, tổng số tiền Shark Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+
+S11 | score=0.2170
+Nguyễn Hữu Tuất được xác định là người giúp sức cho Shark Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Vimo.
+
+S12 | score=0.1692
+Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+----------------------------------------------------------------------------------------------------
+
+THRESHOLD = 0.1
+Kept: 9/12 | Rejected: 3/12
+
+[KEPT]
+- Ngoài dự án tiền số, cơ quan công an còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi Shark Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán bảy bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỉ đồng bị để ngoài sổ sách kế toán.
+- Kết luận điều tra ghi nhận Nextland đã kê khai, quyết toán thuế đối với khoản doanh thu bị để ngoài sổ sách nói trên.
+- Tuy nhiên, cơ quan điều tra vẫn xác định việc sử dụng hai hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Shark Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Đáng chú ý, Shark Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Bằng những hành vi này, tổng số tiền Shark Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+- Nguyễn Hữu Tuất được xác định là người giúp sức cho Shark Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Vimo.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+[REJECTED]
+- Từ những tài liệu thu thập được, cơ quan điều tra đề nghị truy tố Nguyễn Hòa Bình về tội lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+THRESHOLD = 0.15
+Kept: 7/12 | Rejected: 5/12
+
+[KEPT]
+- Ngoài dự án tiền số, cơ quan công an còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi Shark Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán bảy bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỉ đồng bị để ngoài sổ sách kế toán.
+- Đáng chú ý, Shark Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Bằng những hành vi này, tổng số tiền Shark Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+- Nguyễn Hữu Tuất được xác định là người giúp sức cho Shark Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Vimo.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+[REJECTED]
+- Từ những tài liệu thu thập được, cơ quan điều tra đề nghị truy tố Nguyễn Hòa Bình về tội lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Kết luận điều tra ghi nhận Nextland đã kê khai, quyết toán thuế đối với khoản doanh thu bị để ngoài sổ sách nói trên.
+- Tuy nhiên, cơ quan điều tra vẫn xác định việc sử dụng hai hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Shark Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+
+THRESHOLD = 0.2
+Kept: 2/12 | Rejected: 10/12
+
+[KEPT]
+- Bằng những hành vi này, tổng số tiền Shark Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+- Nguyễn Hữu Tuất được xác định là người giúp sức cho Shark Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Vimo.
+
+[REJECTED]
+- Từ những tài liệu thu thập được, cơ quan điều tra đề nghị truy tố Nguyễn Hòa Bình về tội lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Ngoài dự án tiền số, cơ quan công an còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi Shark Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán bảy bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỉ đồng bị để ngoài sổ sách kế toán.
+- Kết luận điều tra ghi nhận Nextland đã kê khai, quyết toán thuế đối với khoản doanh thu bị để ngoài sổ sách nói trên.
+- Tuy nhiên, cơ quan điều tra vẫn xác định việc sử dụng hai hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Shark Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+- Đáng chú ý, Shark Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+THRESHOLD = 0.25
+Kept: 1/12 | Rejected: 11/12
+
+[KEPT]
+- Bằng những hành vi này, tổng số tiền Shark Bình bị cáo buộc trốn thuế là hơn 38,7 tỷ đồng.
+
+[REJECTED]
+- Từ những tài liệu thu thập được, cơ quan điều tra đề nghị truy tố Nguyễn Hòa Bình về tội lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Ngoài dự án tiền số, cơ quan công an còn làm rõ hoạt động kinh doanh bất động sản tại Nextland, nơi Shark Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán để che giấu doanh thu, lợi nhuận.
+- Theo kết quả điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán bảy bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, trong số tiền này, gần 45 tỉ đồng bị để ngoài sổ sách kế toán.
+- Kết luận điều tra ghi nhận Nextland đã kê khai, quyết toán thuế đối với khoản doanh thu bị để ngoài sổ sách nói trên.
+- Tuy nhiên, cơ quan điều tra vẫn xác định việc sử dụng hai hệ thống sổ sách kế toán tại Nextland gây thiệt hại cho ngân sách nhà nước hơn 4,36 tỷ đồng, từ đó đề nghị truy tố Shark Bình về tội vi phạm quy định về kế toán gây hậu quả nghiêm trọng.
+- Cũng theo cơ quan công an, Shark Bình đã chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, không đưa doanh thu vào sổ sách kế toán.
+- Không dừng ở việc để doanh thu ngoài sổ sách, không dừng ở việc để doanh thu ngoài sổ sách, cơ quan điều tra còn xác định Bình chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần nhằm che giấu thông tin cá nhân sở hữu cổ phần.
+- Đáng chú ý, Shark Bình bị cáo buộc nhờ nhân viên đứng tên chủ sở hữu các công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức được chi trả.
+- Nguyễn Hữu Tuất được xác định là người giúp sức cho Shark Bình ở cả 2 nhóm hành vi liên quan dự án AntEx và hoạt động trốn thuế tại Vimo.
+- Theo kết luận điều tra, Tuất tham gia phát triển dự án AntEx, giúp sức cho việc chiếm đoạt tiền của các nhà đầu tư.
+
+====================================================================================================
+Dan Tri Rank 5
+====================================================================================================
+
+S1 | score=0.0863
+Một phần tiền còn được chuyển vào các doanh nghiệp trong hệ sinh thái NextTech để sử dụng không đúng mục đích.
+
+S2 | score=0.1318
+Cơ quan điều tra xác định hành vi của Bình và đồng phạm đã chiếm đoạt của nhiều bị hại số tiền đặc biệt lớn.
+
+S3 | score=0.0585
+Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+
+S4 | score=0.4022
+Để ngoài sổ sách gần 45 tỷ đồng, trốn thuế hơn 38,7 tỷ đồng.
+
+S5 | score=0.1787
+Ngoài hành vi liên quan dự án tiền số, Shark Bình còn bị cáo buộc chỉ đạo cấp dưới thực hiện những sai phạm trong hoạt động kinh doanh bất động sản tại Công ty cổ phần Đầu tư và Kinh doanh bất động sản Nextland.
+
+S6 | score=0.1461
+Theo cơ quan điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+
+S7 | score=0.0983
+Tuy nhiên, gần 45 tỷ đồng trong số này không được đưa vào sổ sách kế toán.
+
+S8 | score=0.1650
+Để che giấu doanh thu và lợi nhuận thực tế, Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán.
+
+S9 | score=0.1507
+Mặc dù Nextland sau đó đã kê khai, quyết toán thuế đối với khoản doanh thu nói trên, cơ quan điều tra vẫn xác định hành vi vi phạm quy định về kế toán gây thiệt hại hơn 4,36 tỷ đồng cho ngân sách Nhà nước.
+
+S10 | score=0.0950
+Đối với hoạt động của Công ty cổ phần Công nghệ Vimo, cơ quan điều tra xác định Shark Bình chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, đồng thời không hạch toán đầy đủ doanh thu vào sổ sách.
+
+S11 | score=0.1402
+Đáng chú ý, bị can còn bị cáo buộc chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần để che giấu việc cá nhân sở hữu cổ phần.
+
+S12 | score=0.0799
+Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
+
+S13 | score=0.4830
+Bằng các thủ đoạn trên, tổng số tiền thuế mà Shark Bình bị cáo buộc trốn là hơn 38,7 tỷ đồng.
+
+----------------------------------------------------------------------------------------------------
+
+THRESHOLD = 0.1
+Kept: 8/13 | Rejected: 5/13
+
+[KEPT]
+- Cơ quan điều tra xác định hành vi của Bình và đồng phạm đã chiếm đoạt của nhiều bị hại số tiền đặc biệt lớn.
+- Để ngoài sổ sách gần 45 tỷ đồng, trốn thuế hơn 38,7 tỷ đồng.
+- Ngoài hành vi liên quan dự án tiền số, Shark Bình còn bị cáo buộc chỉ đạo cấp dưới thực hiện những sai phạm trong hoạt động kinh doanh bất động sản tại Công ty cổ phần Đầu tư và Kinh doanh bất động sản Nextland.
+- Theo cơ quan điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Để che giấu doanh thu và lợi nhuận thực tế, Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán.
+- Mặc dù Nextland sau đó đã kê khai, quyết toán thuế đối với khoản doanh thu nói trên, cơ quan điều tra vẫn xác định hành vi vi phạm quy định về kế toán gây thiệt hại hơn 4,36 tỷ đồng cho ngân sách Nhà nước.
+- Đáng chú ý, bị can còn bị cáo buộc chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần để che giấu việc cá nhân sở hữu cổ phần.
+- Bằng các thủ đoạn trên, tổng số tiền thuế mà Shark Bình bị cáo buộc trốn là hơn 38,7 tỷ đồng.
+
+[REJECTED]
+- Một phần tiền còn được chuyển vào các doanh nghiệp trong hệ sinh thái NextTech để sử dụng không đúng mục đích.
+- Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Tuy nhiên, gần 45 tỷ đồng trong số này không được đưa vào sổ sách kế toán.
+- Đối với hoạt động của Công ty cổ phần Công nghệ Vimo, cơ quan điều tra xác định Shark Bình chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, đồng thời không hạch toán đầy đủ doanh thu vào sổ sách.
+- Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
+
+THRESHOLD = 0.15
+Kept: 5/13 | Rejected: 8/13
+
+[KEPT]
+- Để ngoài sổ sách gần 45 tỷ đồng, trốn thuế hơn 38,7 tỷ đồng.
+- Ngoài hành vi liên quan dự án tiền số, Shark Bình còn bị cáo buộc chỉ đạo cấp dưới thực hiện những sai phạm trong hoạt động kinh doanh bất động sản tại Công ty cổ phần Đầu tư và Kinh doanh bất động sản Nextland.
+- Để che giấu doanh thu và lợi nhuận thực tế, Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán.
+- Mặc dù Nextland sau đó đã kê khai, quyết toán thuế đối với khoản doanh thu nói trên, cơ quan điều tra vẫn xác định hành vi vi phạm quy định về kế toán gây thiệt hại hơn 4,36 tỷ đồng cho ngân sách Nhà nước.
+- Bằng các thủ đoạn trên, tổng số tiền thuế mà Shark Bình bị cáo buộc trốn là hơn 38,7 tỷ đồng.
+
+[REJECTED]
+- Một phần tiền còn được chuyển vào các doanh nghiệp trong hệ sinh thái NextTech để sử dụng không đúng mục đích.
+- Cơ quan điều tra xác định hành vi của Bình và đồng phạm đã chiếm đoạt của nhiều bị hại số tiền đặc biệt lớn.
+- Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Theo cơ quan điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, gần 45 tỷ đồng trong số này không được đưa vào sổ sách kế toán.
+- Đối với hoạt động của Công ty cổ phần Công nghệ Vimo, cơ quan điều tra xác định Shark Bình chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, đồng thời không hạch toán đầy đủ doanh thu vào sổ sách.
+- Đáng chú ý, bị can còn bị cáo buộc chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần để che giấu việc cá nhân sở hữu cổ phần.
+- Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
+
+THRESHOLD = 0.2
+Kept: 2/13 | Rejected: 11/13
+
+[KEPT]
+- Để ngoài sổ sách gần 45 tỷ đồng, trốn thuế hơn 38,7 tỷ đồng.
+- Bằng các thủ đoạn trên, tổng số tiền thuế mà Shark Bình bị cáo buộc trốn là hơn 38,7 tỷ đồng.
+
+[REJECTED]
+- Một phần tiền còn được chuyển vào các doanh nghiệp trong hệ sinh thái NextTech để sử dụng không đúng mục đích.
+- Cơ quan điều tra xác định hành vi của Bình và đồng phạm đã chiếm đoạt của nhiều bị hại số tiền đặc biệt lớn.
+- Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Ngoài hành vi liên quan dự án tiền số, Shark Bình còn bị cáo buộc chỉ đạo cấp dưới thực hiện những sai phạm trong hoạt động kinh doanh bất động sản tại Công ty cổ phần Đầu tư và Kinh doanh bất động sản Nextland.
+- Theo cơ quan điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, gần 45 tỷ đồng trong số này không được đưa vào sổ sách kế toán.
+- Để che giấu doanh thu và lợi nhuận thực tế, Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán.
+- Mặc dù Nextland sau đó đã kê khai, quyết toán thuế đối với khoản doanh thu nói trên, cơ quan điều tra vẫn xác định hành vi vi phạm quy định về kế toán gây thiệt hại hơn 4,36 tỷ đồng cho ngân sách Nhà nước.
+- Đối với hoạt động của Công ty cổ phần Công nghệ Vimo, cơ quan điều tra xác định Shark Bình chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, đồng thời không hạch toán đầy đủ doanh thu vào sổ sách.
+- Đáng chú ý, bị can còn bị cáo buộc chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần để che giấu việc cá nhân sở hữu cổ phần.
+- Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
+
+THRESHOLD = 0.25
+Kept: 2/13 | Rejected: 11/13
+
+[KEPT]
+- Để ngoài sổ sách gần 45 tỷ đồng, trốn thuế hơn 38,7 tỷ đồng.
+- Bằng các thủ đoạn trên, tổng số tiền thuế mà Shark Bình bị cáo buộc trốn là hơn 38,7 tỷ đồng.
+
+[REJECTED]
+- Một phần tiền còn được chuyển vào các doanh nghiệp trong hệ sinh thái NextTech để sử dụng không đúng mục đích.
+- Cơ quan điều tra xác định hành vi của Bình và đồng phạm đã chiếm đoạt của nhiều bị hại số tiền đặc biệt lớn.
+- Từ đó, đề nghị truy tố Bình về tội Lừa đảo chiếm đoạt tài sản theo khoản 4 Điều 174 Bộ luật Hình sự.
+- Ngoài hành vi liên quan dự án tiền số, Shark Bình còn bị cáo buộc chỉ đạo cấp dưới thực hiện những sai phạm trong hoạt động kinh doanh bất động sản tại Công ty cổ phần Đầu tư và Kinh doanh bất động sản Nextland.
+- Theo cơ quan điều tra, từ năm 2022 đến tháng 5/2025, Nextland bán 7 bất động sản, thu về hơn 117,17 tỷ đồng.
+- Tuy nhiên, gần 45 tỷ đồng trong số này không được đưa vào sổ sách kế toán.
+- Để che giấu doanh thu và lợi nhuận thực tế, Bình bị cáo buộc chỉ đạo nhân viên sử dụng hai hệ thống sổ sách kế toán.
+- Mặc dù Nextland sau đó đã kê khai, quyết toán thuế đối với khoản doanh thu nói trên, cơ quan điều tra vẫn xác định hành vi vi phạm quy định về kế toán gây thiệt hại hơn 4,36 tỷ đồng cho ngân sách Nhà nước.
+- Đối với hoạt động của Công ty cổ phần Công nghệ Vimo, cơ quan điều tra xác định Shark Bình chỉ đạo nhân viên cung cấp dịch vụ nhưng không xuất hóa đơn, đồng thời không hạch toán đầy đủ doanh thu vào sổ sách.
+- Đáng chú ý, bị can còn bị cáo buộc chỉ đạo hợp thức hóa các giao dịch chuyển nhượng cổ phần để che giấu việc cá nhân sở hữu cổ phần.
+- Bình cũng nhờ nhân viên đứng tên chủ sở hữu những công ty trách nhiệm hữu hạn một thành viên để nhận tiền cổ tức thay mình.
