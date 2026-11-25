@@ -4,33 +4,7 @@ LABELS = {
     "not_enough_information",
 }
 
-# Experimental baseline.
-# Evidence with relevance score below this threshold
-# will not be used to determine the final verdict.
 RELEVANCE_THRESHOLD = 0.20
-
-RELEVANCE_SCORE_KEYS = (
-    "relevance_score",
-    "sentence_relevance_score",
-    "similarity_score",
-    "tfidf_score",
-)
-
-
-def get_relevance_score(evidence):
-    """
-    Extract sentence relevance score if available.
-    """
-    for key in RELEVANCE_SCORE_KEYS:
-        score = evidence.get(key)
-
-        if score is not None:
-            try:
-                return float(score)
-            except (TypeError, ValueError):
-                continue
-
-    return None
 
 
 def aggregate_claim_evidence(verified_results):
@@ -38,13 +12,11 @@ def aggregate_claim_evidence(verified_results):
     Aggregate sentence-level verification predictions
     into claim-level verdicts.
 
-    Rule-based baseline:
-    - Filter evidence using sentence relevance score.
-    - Exclude low-relevance evidence from verdict calculation.
-    - Aggregate remaining sentence-level NLI predictions.
+    Relevance filtering and verification are performed
+    at sentence level.
 
-    Sentence counts do not represent independent source counts
-    or calibrated truth probabilities.
+    Paragraph and source metadata are preserved in the
+    aggregated evidence records.
     """
 
     aggregated_results = []
@@ -66,58 +38,91 @@ def aggregate_claim_evidence(verified_results):
         inconclusive_evidence = []
         excluded_evidence = []
 
+        total_sentence_verifications = 0
+
         for evidence in evidences:
 
-            verification = evidence.get(
-                "verification",
-                {},
-            ) or {}
+            sentence_verifications = (
+                evidence.get("sentence_verifications", [])
+                or []
+            )
 
-            label = verification.get("label")
+            for sentence_result in sentence_verifications:
 
-            if label not in LABELS:
-                continue
+                verification = (
+                    sentence_result.get("verification", {})
+                    or {}
+                )
 
-            # --------------------------------------------------
-            # 1. Relevance filtering
-            # --------------------------------------------------
+                label = verification.get("label")
 
-            relevance_score = get_relevance_score(evidence)
+                if label not in LABELS:
+                    continue
 
-            if (
-                relevance_score is not None
-                and relevance_score < RELEVANCE_THRESHOLD
-            ):
-                excluded_evidence.append({
+                total_sentence_verifications += 1
+
+                relevance_score = sentence_result.get(
+                    "relevance_score"
+                )
+
+                # Relevance threshold for aggregation.
+                if relevance_score is not None:
+
+                    try:
+                        relevance_score = float(relevance_score)
+
+                    except (TypeError, ValueError):
+                        relevance_score = None
+
+                if (
+                    relevance_score is not None
+                    and relevance_score < RELEVANCE_THRESHOLD
+                ):
+
+                    excluded_evidence.append({
+                        **evidence,
+                        "sentence_text": sentence_result.get(
+                            "sentence_text"
+                        ),
+                        "relevance_score": relevance_score,
+                        "verification": verification,
+                        "aggregation_exclusion_reason": (
+                            "low_relevance_score"
+                        ),
+                    })
+
+                    continue
+
+                sentence_evidence = {
                     **evidence,
-                    "aggregation_exclusion_reason": (
-                        "low_relevance_score"
+                    "sentence_text": sentence_result.get(
+                        "sentence_text"
                     ),
-                })
-                continue
+                    "relevance_score": relevance_score,
+                    "verification": verification,
+                }
 
-            # --------------------------------------------------
-            # 2. Count valid evidence
-            # --------------------------------------------------
+                label_counts[label] += 1
 
-            label_counts[label] += 1
+                if label == "supported":
 
-            if label == "supported":
+                    supporting_evidence.append(
+                        sentence_evidence
+                    )
 
-                supporting_evidence.append(evidence)
+                elif label == "refuted":
 
-            elif label == "refuted":
+                    refuting_evidence.append(
+                        sentence_evidence
+                    )
 
-                refuting_evidence.append(evidence)
+                else:
 
-            else:
+                    inconclusive_evidence.append(
+                        sentence_evidence
+                    )
 
-                inconclusive_evidence.append(evidence)
-
-        # ------------------------------------------------------
-        # 3. Claim-level aggregation
-        # ------------------------------------------------------
-
+        # Claim-level aggregation.
         has_support = label_counts["supported"] > 0
         has_refutation = label_counts["refuted"] > 0
 
@@ -143,10 +148,6 @@ def aggregate_claim_evidence(verified_results):
 
             verdict = "not_enough_information"
 
-        # ------------------------------------------------------
-        # 4. Output
-        # ------------------------------------------------------
-
         aggregated_results.append({
 
             "claim_id": claim_id,
@@ -155,7 +156,7 @@ def aggregate_claim_evidence(verified_results):
 
             "evidence_counts": label_counts,
 
-            "total_evidence": len(evidences),
+            "total_evidence": total_sentence_verifications,
 
             "valid_verification_count": total_valid,
 

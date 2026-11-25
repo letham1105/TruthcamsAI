@@ -10,11 +10,19 @@ import {
   ShieldCheck,
   Loader2,
   AlertCircle,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import {
   getVerification,
   type VerificationSession,
 } from "../services/verification";
+
+type EvidenceType =
+  | "supporting"
+  | "contradicting"
+  | "context"
+  | "excluded";
 
 interface EvidenceItem {
   id: string;
@@ -22,8 +30,12 @@ interface EvidenceItem {
   source: string;
   url: string;
   summary: string;
-  relevance: number;
-  type: "supporting" | "contradicting" | "context" | "excluded";
+  originalParagraph: string;
+  relevance: number | null;
+  type: EvidenceType;
+  verificationLabel: string;
+  confidence: number | null;
+  exclusionReason: string;
 }
 
 interface AggregatedClaim {
@@ -65,10 +77,19 @@ function getNestedText(
   return "";
 }
 
+function getNumber(value: unknown): number | null {
+  if (value === null || value === undefined || value === "") {
+    return null;
+  }
+
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
 function getEvidenceItem(
   evidence: Record<string, unknown>,
   index: number,
-  type: EvidenceItem["type"],
+  type: EvidenceType,
 ): EvidenceItem {
   const verification =
     (evidence.verification as Record<string, unknown>) || {};
@@ -105,15 +126,27 @@ function getEvidenceItem(
     ]) ||
     getText(sourceInfo.url);
 
+  // Sentence-level verification output from the new aggregator.
+  const sentenceText = getNestedText(evidence, [
+    "sentence_text",
+    "verified_sentence",
+    "verification_sentence",
+  ]);
+
+  // Keep the original paragraph for context.
+  const originalParagraph = getNestedText(evidence, [
+    "original_paragraph_text",
+    "paragraph_text",
+    "original_text",
+    "content",
+    "snippet",
+  ]);
+
   const summary =
-    getNestedText(evidence, [
-      "verified_sentence",
-      "paragraph_text",
-      "original_paragraph_text",
-      "snippet",
-      "content",
-      "text",
-    ]) || "No evidence content available.";
+    sentenceText ||
+    originalParagraph ||
+    getNestedText(evidence, ["text"]) ||
+    "No evidence content available.";
 
   const relevanceValue =
     evidence.relevance_score ??
@@ -121,20 +154,42 @@ function getEvidenceItem(
     evidence.similarity_score ??
     evidence.tfidf_score;
 
-  const relevance = Number(relevanceValue ?? 0);
+  const relevance = getNumber(relevanceValue);
+
+  const verificationLabel = getText(
+    verification.label ?? verification.predicted_label,
+  ).toLowerCase();
+
+  const confidence = getNumber(
+    verification.confidence ??
+      verification.score ??
+      verification.probability,
+  );
+
+  const exclusionReason = getText(
+    evidence.aggregation_exclusion_reason ??
+      evidence.exclusion_reason ??
+      evidence.reason,
+  );
+
+  const uniqueKey = [
+    type,
+    getText(evidence.evidence_id ?? evidence.id ?? index),
+    sentenceText.slice(0, 80),
+  ].join("-");
 
   return {
-    id: getText(
-      evidence.id ??
-      evidence.evidence_id ??
-      `${type}-${index}`,
-    ),
+    id: uniqueKey,
     title,
     source,
     url,
     summary,
-    relevance: Number.isFinite(relevance) ? relevance : 0,
+    originalParagraph,
+    relevance,
     type,
+    verificationLabel,
+    confidence,
+    exclusionReason,
   };
 }
 
@@ -174,8 +229,8 @@ function EvidencePage() {
 
   const sessionId = Number(
     searchParams.get("sessionId") ||
-    location.state?.sessionId ||
-    localStorage.getItem("truthcams_last_session_id"),
+      location.state?.sessionId ||
+      localStorage.getItem("truthcams_last_session_id"),
   );
 
   const [session, setSession] =
@@ -225,7 +280,9 @@ function EvidencePage() {
         console.error("Failed to load evidence:", err);
 
         if (!cancelled) {
-          setError("Unable to load evidence from this verification session.");
+          setError(
+            "Unable to load evidence from this verification session.",
+          );
         }
       } finally {
         if (!cancelled) {
@@ -250,7 +307,7 @@ function EvidencePage() {
 
     const groups: {
       key: keyof AggregatedClaim;
-      type: EvidenceItem["type"];
+      type: EvidenceType;
     }[] = [
       { key: "supporting_evidence", type: "supporting" },
       { key: "refuting_evidence", type: "contradicting" },
@@ -302,7 +359,8 @@ function EvidencePage() {
       const matchesSearch =
         item.title.toLowerCase().includes(term) ||
         item.source.toLowerCase().includes(term) ||
-        item.summary.toLowerCase().includes(term);
+        item.summary.toLowerCase().includes(term) ||
+        item.originalParagraph.toLowerCase().includes(term);
 
       const matchesFilter =
         filter === "all" || item.type === filter;
@@ -311,7 +369,7 @@ function EvidencePage() {
     });
   }, [evidence, searchTerm, filter]);
 
-  const getTypeLabel = (type: EvidenceItem["type"]) => {
+  const getTypeLabel = (type: EvidenceType) => {
     switch (type) {
       case "supporting":
         return "Supporting";
@@ -324,7 +382,7 @@ function EvidencePage() {
     }
   };
 
-  const getTypeStyle = (type: EvidenceItem["type"]) => {
+  const getTypeStyle = (type: EvidenceType) => {
     switch (type) {
       case "supporting":
         return "bg-[#EDF3EE] text-[#52745A]";
@@ -367,9 +425,11 @@ function EvidencePage() {
           size={32}
           className="animate-spin text-[#557CA6]"
         />
+
         <h2 className="text-base font-semibold text-[#142C4E] mt-5">
           Loading evidence
         </h2>
+
         <p className="text-sm text-gray-500 mt-2">
           Please wait while we retrieve the evidence and sources.
         </p>
@@ -395,10 +455,12 @@ function EvidencePage() {
                 size={21}
                 className="text-[#A56B6B] shrink-0"
               />
+
               <div>
                 <h2 className="font-semibold text-[#142C4E]">
                   Evidence unavailable
                 </h2>
+
                 <p className="text-sm text-gray-500 mt-2">
                   {error}
                 </p>
@@ -434,21 +496,22 @@ function EvidencePage() {
           </h1>
 
           <p className="text-sm text-gray-500 mt-3 leading-7 max-w-2xl">
-            Explore retrieved sources and inspect evidence evaluated by the verification pipeline.
+            Explore retrieved sources and inspect evidence evaluated by
+            the verification pipeline.
           </p>
         </header>
 
         {/* Claims */}
         <section className="bg-white border border-[#E5E5E0] rounded-xl p-6 lg:p-7 mb-6">
-          <div className="flex items-center justify-between gap-3">
-            <div>
-              <h2 className="text-base font-semibold text-[#142C4E]">
-                Claims under examination
-              </h2>
-              <p className="text-xs text-gray-400 mt-1">
-                {claims.length} {claims.length === 1 ? "claim" : "claims"} analyzed
-              </p>
-            </div>
+          <div>
+            <h2 className="text-base font-semibold text-[#142C4E]">
+              Claims under examination
+            </h2>
+
+            <p className="text-xs text-gray-400 mt-1">
+              {claims.length}{" "}
+              {claims.length === 1 ? "claim" : "claims"} analyzed
+            </p>
           </div>
 
           {claims.length > 0 ? (
@@ -477,7 +540,9 @@ function EvidencePage() {
                     </p>
 
                     <span className="text-xs text-[#557CA6] shrink-0 mt-1">
-                      {selectedClaimIndex === index ? "Selected" : "View"}
+                      {selectedClaimIndex === index
+                        ? "Selected"
+                        : "View"}
                     </span>
                   </div>
                 </button>
@@ -496,6 +561,7 @@ function EvidencePage() {
             <h2 className="text-base font-semibold text-[#142C4E]">
               Evidence overview
             </h2>
+
             <span className="text-xs text-gray-500">
               {counts.total} records
             </span>
@@ -511,6 +577,7 @@ function EvidencePage() {
                   <p className="text-xs text-gray-500">
                     {stat.label}
                   </p>
+
                   <span
                     className={`w-2 h-2 rounded-full ${
                       stat.type === "supporting"
@@ -527,8 +594,9 @@ function EvidencePage() {
                 <p className="text-2xl font-semibold text-[#142C4E] mt-3">
                   {stat.value}
                 </p>
+
                 <p className="text-xs text-gray-400 mt-1">
-                  Evidence records
+                  Sentence records
                 </p>
               </div>
             ))}
@@ -542,20 +610,25 @@ function EvidencePage() {
               <h2 className="text-base font-semibold text-[#142C4E]">
                 Evidence collection
               </h2>
+
               <p className="text-sm text-gray-500 mt-1">
-                {counts.total} evidence records for the selected claim.
+                {counts.total} sentence-level records for the selected claim.
               </p>
             </div>
 
+            {/* Search and filter */}
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="relative flex-1">
                 <Search
                   size={16}
                   className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
                 />
+
                 <input
                   value={searchTerm}
-                  onChange={(event) => setSearchTerm(event.target.value)}
+                  onChange={(event) =>
+                    setSearchTerm(event.target.value)
+                  }
                   placeholder="Search evidence..."
                   className="w-full pl-9 pr-3 py-2.5 bg-white border border-[#E5E5E0] rounded-lg text-sm text-[#454B53] placeholder:text-gray-400 outline-none focus:border-[#AFC1D3] transition-colors"
                 />
@@ -566,6 +639,7 @@ function EvidencePage() {
                   size={15}
                   className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
                 />
+
                 <select
                   value={filter}
                   onChange={(event) => setFilter(event.target.value)}
@@ -598,9 +672,18 @@ function EvidencePage() {
                           {getTypeLabel(item.type)}
                         </span>
 
-                        <span className="text-xs text-gray-400">
-                          Relevance: {(item.relevance * 100).toFixed(1)}%
-                        </span>
+                        {item.relevance !== null && (
+                          <span className="text-xs text-gray-400">
+                            Relevance:{" "}
+                            {(item.relevance * 100).toFixed(1)}%
+                          </span>
+                        )}
+
+                        {item.verificationLabel && (
+                          <span className="text-xs text-gray-400">
+                            Model: {item.verificationLabel.replaceAll("_", " ")}
+                          </span>
+                        )}
                       </div>
 
                       {item.url && (
@@ -624,13 +707,63 @@ function EvidencePage() {
                       {item.source}
                     </p>
 
-                    <p className="text-sm text-gray-600 mt-3 leading-7 whitespace-pre-wrap">
-                      {item.summary}
-                    </p>
+                    {/* Verified sentence */}
+                    <div className="mt-3 rounded-lg bg-[#F7F8F9] border border-[#E8EAED] p-4">
+                      <p className="text-xs font-medium text-gray-500 mb-2">
+                        Verified sentence
+                      </p>
 
+                      <p className="text-sm text-gray-700 leading-7 whitespace-pre-wrap">
+                        {item.summary}
+                      </p>
+                    </div>
+
+                    {/* Original paragraph context */}
+                    {item.originalParagraph &&
+                      item.originalParagraph !== item.summary && (
+                        <details className="mt-3 group">
+                          <summary className="cursor-pointer list-none flex items-center justify-between gap-3 text-xs text-gray-500 hover:text-[#142C4E]">
+                            <span>
+                              View original paragraph
+                            </span>
+
+                            <ChevronDown
+                              size={15}
+                              className="group-open:hidden"
+                            />
+
+                            <ChevronUp
+                              size={15}
+                              className="hidden group-open:block"
+                            />
+                          </summary>
+
+                          <div className="mt-3 p-4 bg-[#FAF9F6] border border-[#E5E5E0] rounded-lg">
+                            <p className="text-sm text-gray-600 leading-7 whitespace-pre-wrap">
+                              {item.originalParagraph}
+                            </p>
+                          </div>
+                        </details>
+                      )}
+
+                    {/* Exclusion reason */}
+                    {item.type === "excluded" &&
+                      item.exclusionReason && (
+                        <div className="mt-3 p-3 rounded-lg bg-[#F5F5F4] border border-[#E5E5E0]">
+                          <p className="text-xs font-medium text-gray-500">
+                            Exclusion reason
+                          </p>
+
+                          <p className="text-sm text-gray-600 mt-1">
+                            {item.exclusionReason.replaceAll("_", " ")}
+                          </p>
+                        </div>
+                      )}
+
+                    {/* Detail navigation */}
                     <button
                       onClick={() =>
-                        navigate(`/evidence/${item.id}`, {
+                        navigate(`/evidence/${encodeURIComponent(item.id)}`, {
                           state: {
                             item,
                             sessionId,
@@ -673,11 +806,14 @@ function EvidencePage() {
             size={16}
             className="shrink-0 mt-0.5 text-[#557CA6]"
           />
+
           <p>
-            Evidence labels represent automated model predictions.
-            Relevance scores indicate similarity to the selected claim
-            and should not be interpreted as probabilities of truth.
-            Excluded evidence is not used in claim-level verdict aggregation.
+            Evidence labels represent automated model predictions
+            at sentence level. Relevance scores indicate similarity
+            to the selected claim and should not be interpreted as
+            probabilities of truth. Multiple sentences may originate
+            from the same article. Excluded evidence is not used in
+            claim-level verdict aggregation.
           </p>
         </div>
 
